@@ -37,5 +37,29 @@ a = [10, 20, "GfG", 40, True]
 print(a)
 
 # Checking types of elements
-print(type(a[2]))  # str
-print(type(a[4]))  # bool    
+print(type(a[2]))  # str, as "GfG" is a string
+print(type(a[4]))  # bool, as True is a boolean
+
+# Noted: Lists Store References, Not Values
+# In Python, lists store references to objects, not the actual values.
+# This means that if a mutable object (e.g., a list or dictionary) inside a list is modified,
+# the change will be reflected in all references to that object.
+mutable_object = [1, 2, 3]
+list_with_reference = [mutable_object, 4, 5]
+print("Before modification:", list_with_reference)
+
+# Modify the mutable object
+mutable_object.append(6)
+print("After modification:", list_with_reference)
+
+a = [2] * 5
+print(a)  # Output: [2, 2, 2, 2, 2]
+
+# Lists can contain other lists
+nested_list = [1, 2, [3] * 5, 5]
+print(nested_list)  # Output: [1, 2, [3, 3, 3, 3, 3], 5]
+
+b = [1, 2, 3, "B", 5.5, True]
+
+# Compare 2 list
+print(a == b)
