@@ -63,3 +63,30 @@ b = [1, 2, 3, "B", 5.5, True]
 
 # Compare 2 list
 print(a == b)
+
+# Extend list
+print("Original list b:", b)
+a = b.extend([6, 7, 8])  # Extends list b with new elements
+print("After extending b with [6, 7, 8]:", b)
+
+#Nested list
+nested_list = [[1, 2], [3, 4], [5, 6]]
+# Accessing elements in a nested list
+print("First element of first sub-list:", nested_list[0][0])  # Output: 1
+print("Second element of second sub-list:", nested_list[1][1])  # Output: 4
+
+# List Traversal
+for sublist in nested_list:
+    for item in sublist:
+        print(item, end=' ')  # Output: 1 2 3 4 5 6
+print()
+
+# List Comprehension
+s = [x**2 for x in range(10)]  # Creates a list of squares from 0 to 9
+print("List of squares from 0 to 9:", s)
+
+# List comprehension with condition
+even_squares = [x**2 for x in range(10) if x % 2 == 0] # Squares of even numbers
+not_even_squares = [x**2 for x in range(10) if x % 2 != 0] # Squares of odd numbers
+print("Squares of odd numbers from 0 to 9:", not_even_squares)
+print("Squares of even numbers from 0 to 9:", even_squares)
