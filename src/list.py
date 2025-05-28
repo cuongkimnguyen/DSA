@@ -90,3 +90,8 @@ even_squares = [x**2 for x in range(10) if x % 2 == 0] # Squares of even numbers
 not_even_squares = [x**2 for x in range(10) if x % 2 != 0] # Squares of odd numbers
 print("Squares of odd numbers from 0 to 9:", not_even_squares)
 print("Squares of even numbers from 0 to 9:", even_squares)
+
+
+arr =  [1, 2, 3, 4, 5, 6, 7, 8, 9]
+result = [str(item) for index, item in enumerate(arr) if index % 2 == 0]
+print(" ".join(result))  # Output: 1 3 5 7 9
